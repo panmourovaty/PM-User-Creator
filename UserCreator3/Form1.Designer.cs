@@ -73,7 +73,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 42);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Vytvořit";
+            this.button1.Text = "Create";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -127,7 +127,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(617, 400);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Jeden uživatel";
+            this.tabPage1.Text = "Single user";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -172,7 +172,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(617, 400);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Více uživatelů";
+            this.tabPage2.Text = "More users";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -332,7 +332,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(617, 400);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Nastavení";
+            this.tabPage3.Text = "Settings";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -366,7 +366,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "User Creator";
+            this.Text = "PM User Creator";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
