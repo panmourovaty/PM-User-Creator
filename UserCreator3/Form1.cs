@@ -33,7 +33,7 @@ namespace UserCreator3
                 proc1.FileName = @"C:\Windows\System32\cmd.exe";
                 proc1.Verb = "runas";
                 proc1.Arguments = "/c " + Command;
-                proc1.WindowStyle = ProcessWindowStyle.Minimized;
+                proc1.WindowStyle = ProcessWindowStyle.Hidden;
                 Process.Start(proc1);
         }
 
@@ -74,7 +74,7 @@ namespace UserCreator3
                 proc1.FileName = @"C:\Windows\System32\cmd.exe";
                 proc1.Verb = "runas";
                 proc1.Arguments = "/c " + Command;
-                proc1.WindowStyle = ProcessWindowStyle.Minimized;
+                proc1.WindowStyle = ProcessWindowStyle.Hidden;
                 Process.Start(proc1);
                 progressBar1.Value += 1;
             }
@@ -111,6 +111,114 @@ namespace UserCreator3
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var proc1 = new ProcessStartInfo();
+            string Command;
+            proc1.UseShellExecute = true;
+            Command = @"net user " + textBox4.Text + " /delete";
+            proc1.WorkingDirectory = @"C:\Windows\System32";
+            proc1.FileName = @"C:\Windows\System32\cmd.exe";
+            proc1.Verb = "runas";
+            proc1.Arguments = "/c " + Command;
+            proc1.WindowStyle = ProcessWindowStyle.Hidden;
+            Process.Start(proc1);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int c = Convert.ToInt32(numericUpDown4.Value);
+            int d = Convert.ToInt32(numericUpDown3.Value) + 1;
+            progressBar2.Maximum = Convert.ToInt32(numericUpDown2.Value);
+            for (int i = c; i < d; i++)
+            {
+                var proc1 = new ProcessStartInfo();
+                string Command;
+                proc1.UseShellExecute = true;
+                Command = @"net user " + textBox8.Text + i + textBox5.Text + " /delete";
+                proc1.WorkingDirectory = @"C:\Windows\System32";
+                proc1.FileName = @"C:\Windows\System32\cmd.exe";
+                proc1.Verb = "runas";
+                proc1.Arguments = "/c " + Command;
+                proc1.WindowStyle = ProcessWindowStyle.Hidden;
+                Process.Start(proc1);
+                progressBar2.Value += 1;
+            }
+            MessageBox.Show("Complete !");
+            progressBar2.Value = 0;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            label17.Text = textBox8.Text + numericUpDown4.Value + textBox5.Text + " - " + textBox3.Text + numericUpDown3.Value + textBox5.Text;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            var proc1 = new ProcessStartInfo();
+            string Command;
+            proc1.UseShellExecute = true;
+            Command = @"net user && pause";
+            proc1.WorkingDirectory = @"C:\Windows\System32";
+            proc1.FileName = @"C:\Windows\System32\cmd.exe";
+            proc1.Verb = "runas";
+            proc1.Arguments = "/c " + Command;
+            proc1.WindowStyle = ProcessWindowStyle.Normal;
+            Process.Start(proc1);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            var proc1 = new ProcessStartInfo();
+            string Command;
+            proc1.UseShellExecute = true;
+            Command = @"net user " + textBox9.Text + " /active:yes";
+            proc1.WorkingDirectory = @"C:\Windows\System32";
+            proc1.FileName = @"C:\Windows\System32\cmd.exe";
+            proc1.Verb = "runas";
+            proc1.Arguments = "/c " + Command;
+            proc1.WindowStyle = ProcessWindowStyle.Hidden;
+            Process.Start(proc1);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            var proc1 = new ProcessStartInfo();
+            string Command;
+            proc1.UseShellExecute = true;
+            Command = @"net user " + textBox9.Text + " /active:no";
+            proc1.WorkingDirectory = @"C:\Windows\System32";
+            proc1.FileName = @"C:\Windows\System32\cmd.exe";
+            proc1.Verb = "runas";
+            proc1.Arguments = "/c " + Command;
+            proc1.WindowStyle = ProcessWindowStyle.Hidden;
+            Process.Start(proc1);
+        }
+
+        private void tabPage7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            var proc1 = new ProcessStartInfo();
+            string Command;
+            proc1.UseShellExecute = true;
+            Command = @"net user " + textBox10.Text + " && pause";
+            proc1.WorkingDirectory = @"C:\Windows\System32";
+            proc1.FileName = @"C:\Windows\System32\cmd.exe";
+            proc1.Verb = "runas";
+            proc1.Arguments = "/c " + Command;
+            proc1.WindowStyle = ProcessWindowStyle.Normal;
+            Process.Start(proc1);
+        }
+
+        private void tabPage6_Click(object sender, EventArgs e)
         {
 
         }
